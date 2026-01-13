@@ -1,0 +1,92 @@
+Proposal for development of Live Fundraising System – Phase I
+
+Objective: This proposal is for development and deployment of platform for managing Fundraising Events. 
+Summary of features: 
+Event Organisers can sign up on the portal and create various fund-raising events. These events will be hosted on the platform and guests / participants can make live donations for the events. Live counters will show the amount of donations collected and names of the donors will also be flashed. 
+Key Entities:
+Portal: The web-based system (front end and back end) 
+Portal Administrator: Responsible for overall portal administration, creating and managing event organiser accounts, collecting live donations and disbursements of payments to the organisers.
+Event Organisers: Will sign up on the portal and create various fundraising events.
+Donor: Individuals who will visit these events and make donations. Can be also referred to as Patrons / Participants / Visitors / Guests etc. 
+Event: A fundraising event that will run on the platform for a specific period, as specified by the Event Organiser. The portal will have the capability to host multiple events simultaneously, from same or different Event Organisers. 
+Donation: A monetary contribution from an individual donor towards a fundraising event. Donation can be made online through the portal or offline (Cash / Cheque / Wire transfer etc.)
+Basic Functionalities:
+Portal Administrator: 
+Sign up an event organiser
+Create / Update an event for the organiser
+Receive Donations (Online)
+Transfer Donation amounts to respective organisers
+Event Organizer:
+Sign up on the portal
+Create Events
+Collect Online Donations
+Update Offline Donations received in the portal
+View Reports / Statistics
+Donor:
+Sign up on the portal
+View Events
+Make live donations
+Make offline donations / pledge
+View Donation History
+
+Workflow:
+The Event Organiser signs up on the portal. Sign up process is one time, free and remains valid until admin removes the account or the Organiser leaves the platform.
+Sign up can be done by the Organiser themselves from the portal front end.
+Alternatively, the portal admin can setup the account on behalf of the Organiser from the backend and share credentials with the Organiser.
+
+Organiser creates an event. Portal Administrator can also do the same from backend, if needed. 
+Each event will require some specific information like Event Title, Description, Date(s), Donation Goal, etc.
+Admin checks the event details from backend, ‘approves’ the event and updates the event fee. There will be a default fee, but admin can edit the same depending upon the client. If Portal Administrator is creating the event from the backend, it is approved by default. Once an event is approved, the Organiser will receive and email notification with a request for payment of the event fee. 
+Organiser needs to pay the event hosting fee to the Portal. Fee can be paid online via PayPal or paid offline via methods offered by Portal. 
+Offline payments need to be manually updated in the Portal by Admin.
+Once Event Fee is received, Portal Administrator will update the event status to “Active”. Only Active events will show up at the front end of the portal. 
+Future Events will be shown on the portal under “Upcoming Events” section. Likewise, one an event is over, it will move under the “Event Archives” section. Ongoing events shall be displayed under the “Live Events" section. 
+Portal visitors (donors / potential donors) can bookmark an upcoming event and use the ‘add to calendar’ feature to set a reminder. 
+General visitor on the portal can see the ongoing events under “Live Events” or browse past or future events under respective categories. Donations can be made only for “Live Events”. 
+
+If a visitor wants to donate for a particular event, he / she can sign up as a donor or decide to donate as a ‘guest’. For repeat donations, signed up donors can simply login and donate again, whereas guest donors will need to fill in their particulars again. If it’s a guest the he must retain access till that event closes – what info do they get to guest level with?
+
+Donations can be made:
+Online from the portal via PayPal in this Phase. In subsequent phases of development more payment options such as WeChatPay / GooglePay / AliPay etc. will be considered. PayPal fee deduction / Stripe / Wise?
+Via Cash / Credit / Debit Card / QR Code at the Concierge Desk setup by the Organiser / Portal Administrator at the event venue. The desk personal will have to manually update such payments into the portal.
+Pledge / Offline. A donor can pledge a donation amount at the event venue and later send the payment via Cheque / Wire Transfer or any other method. Once the event is over, an automated email is sent to all donors who have pledged and request them to pay. It will be responsibility of the Event Organiser to update such payments as and when received into the portal’s database. 
+
+When a donation is made:
+The donation meter is updated real time
+A small confetti / firework will be shown at the front end, along with the name of the donor and amount of donation.
+In case Donor has preferred to be anonymous, only the amount of donation received will be shown. 
+Reports:
+Organiser can see real time reports of no. of online visitors (portal) to an event, Total Donations received, Donations Pledged, List of Donors etc.
+Portal Administrator will also have access to the same reports, for all organisers.
+ 
+Optional Features:
+SMS Notification: Donors will receive SMS confirmation of their live donations. Those who pledge will receive the SMS with link to the payment page. Necessary SMS gateway such as Twilio or similar will have to be integrated for the same. 
+WhatsApp Notification: Same messages as above can also be delivered on WhatsApp to the Donors. Prefer this – try WATI or alternatives, we already have a WATI account if u want to try
+Provision for Event Organiser to upload a video corresponding to the event. See if it reduces cost, can remove this 
+ 
+Technology Stack: 
+Development Framework: 
+Front End: Angular / React JS
+Backend: Node JS
+Database: PostgreSQL
+Hosting Environment: AWS recommended. 
+UI / UX: 
+Mobile first, adaptive design for the front end. 
+A separate, wide screen UI for the Event Organiser for displaying the live event on large screens at the venue. 
+ 
+
+Front end – how will it show – size and resolution as we’ll mostly show it live at an event for a few hours with the pressure minutes when the Chief Fund Raising person comes on stage and pushes for pledges, tells emotional stories and everyone looks at the screen, leaderboard and ladder / thermometer (or whatever graphic we decide); our system should be able to take this pressure and be live and smooth with even say 800 – 1000 online at the same time.  
+
+Orientation is also important or can we have it dynamic.
+
+Option to necessitate payment by credit card? So that there is no chasing later on… 
+/ Possible to choose for each event if we want only online or plus offline as some organisers don’t want to take a risk, whilst others know everyone in the audience so they are comfy with this.
+
+Concern – online payment commission / fees – simulate amounts and who will pay. Can we choose prior to set up who will pay commission / fees.
+
+March 27th is the next live event – can we make it in time and will enough time to test properly? 
+
+Most important is the guest/ donor sign in/ sign up experience. Need to simulate these screen by screen so we know it’s the least number of screens to get them to where we want to get to
+
+All must be responsive
+
