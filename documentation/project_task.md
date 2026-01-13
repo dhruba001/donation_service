@@ -1,0 +1,26 @@
+# Live Fundraising System
+
+- [x] Obtain and analyze requirements from SOW <!-- id: 0 -->
+- [ ] Project Initialization <!-- id: 1 -->
+    - [ ] Create `documentation` folder and initial guides <!-- id: 10 -->
+    - [ ] Create `client` (Vite + React) <!-- id: 11 -->
+    - [ ] Install dependencies (Tailwind, Framer Motion, Router, Recharts, Lucide) <!-- id: 12 -->
+    - [ ] Setup Tailwind Design System (Colors, Fonts) <!-- id: 13 -->
+- [ ] Frontend Development (Mock Data) <!-- id: 2 -->
+    - [ ] Create Mock Data Service (`src/mocks`) <!-- id: 14 -->
+    - [ ] **Components**
+        - [ ] Layouts (Main, LiveEvent, Dashboard) <!-- id: 15 -->
+        - [ ] Shared UI (Buttons, Cards, Inputs, Modals) <!-- id: 16 -->
+    - [ ] **Pages**
+        - [ ] Landing Home Page <!-- id: 17 -->
+        - [ ] Live Event Screen (Thermometer, Feed, Leaderboard) <!-- id: 18 -->
+        - [ ] Donation Flow (Modal/Form) <!-- id: 19 -->
+        - [ ] Organizer Dashboard (Stats & Charts) <!-- id: 20 -->
+    - [ ] **Interactivity**
+        - [ ] Simulate "Live" donations (confetti, progress update) <!-- id: 21 -->
+- [ ] Backend Development (Phase 2) <!-- id: 3 -->
+    - [ ] Setup Express & MongoDB <!-- id: 22 -->
+    - [ ] Auth & API Endpoints <!-- id: 23 -->
+    - [ ] Socket.io Integration <!-- id: 24 -->
+- [ ] Verification <!-- id: 9 -->
+    - [ ] Manual User Flow Testing <!-- id: 25 -->
